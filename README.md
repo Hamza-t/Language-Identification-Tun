@@ -146,6 +146,26 @@ Our task is a text multilabel classification, there is many methods :
 ![image](https://user-images.githubusercontent.com/71349228/209237621-08da2010-4263-4b50-8bcd-8835f3c641df.png)
 
 
+### A. Using the old-fashioned Bag-of-Words (with Tf-Idf or countvector) 🧯
+* The text feature extraction methods will be tf-idf and Count-Vectorization
+* The classifiers will be Stochastic Gradient Descent and naive_bayes
+
+#### a. Count vectorizer
+##### i) Naive bayes
+![image](https://user-images.githubusercontent.com/71349228/209238058-0b6d814b-560b-43ef-af68-7f7fdfdea291.png)
+![image](https://user-images.githubusercontent.com/71349228/209238068-e7aa4f65-124d-4b1b-9dc7-8e71edbb3bfb.png)
+![image](https://user-images.githubusercontent.com/71349228/209238075-bc0a0f14-13e4-4edb-a698-b91e6702afce.png)
+
+**The f1-score of the 4th class(code-switching) is too low : ``0.61``, the rest of the prediction is super perfect , so our problem in the code-switching label!
+let's see the others combination**
+##### ii) Stochastic Gradient Descent
+![image](https://user-images.githubusercontent.com/71349228/209238399-85e80900-95dd-4c22-b263-ff25fc2d09c0.png)
+![image](https://user-images.githubusercontent.com/71349228/209238403-38cb4bd2-4945-45c3-8914-dcbcf80d684e.png)
+![image](https://user-images.githubusercontent.com/71349228/209238406-7f89fff7-151c-468a-bb4a-df32707dc34e.png)
+
+#### a. tf-idf
+##### i) Naive bayes
+##### ii) Stochastic Gradient Descent
 
 We will start by **preparing and cleaning** each dataset than merge them together. 
 
