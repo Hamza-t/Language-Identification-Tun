@@ -127,7 +127,7 @@ text  = "Hamza is a clever person, mais he is stupid!"
 * this text is a C-S text : english and french, if we remove the stopwords ( 'mais' is a french stopword) the text will be english langage! 
 
 2. Data visualisation 🎨
-*distribution : 
+
 
 ![image](https://user-images.githubusercontent.com/71349228/209237175-9db17c35-670c-473e-a5bc-3961507fcafb.png)
 
