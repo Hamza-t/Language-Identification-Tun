@@ -165,7 +165,18 @@ let's see the others combination**
 
 #### a. tf-idf
 ##### i) Naive bayes
+![image](https://user-images.githubusercontent.com/71349228/209238523-3f7d2a77-08d8-4450-b99a-b1b4b38dbd17.png)
+![image](https://user-images.githubusercontent.com/71349228/209238526-b6b86356-51a2-44aa-afc0-97afae38cca4.png)
+![image](https://user-images.githubusercontent.com/71349228/209238527-67086441-2410-49a3-9ea7-543a66e5cc08.png)
+
 ##### ii) Stochastic Gradient Descent
+![image](https://user-images.githubusercontent.com/71349228/209238558-8de850bf-b466-47ea-a116-ffb58ee4e1ee.png)
+![image](https://user-images.githubusercontent.com/71349228/209238561-370a36cf-20cd-4906-807b-10566991b8a7.png)
+![image](https://user-images.githubusercontent.com/71349228/209238566-937dfd52-8189-44a5-9b40-76e9b4a7775d.png)
+
+#### Interpretation : 
+The first method  : Bag of words give us a macro averaged F-score equal ``0.89``, but a bad results in the 4th label (recall  = 0.59 for this class)
+* Best combination  : **tf-idf + Stochastic Gradient Descent**
 
 We will start by **preparing and cleaning** each dataset than merge them together. 
 
