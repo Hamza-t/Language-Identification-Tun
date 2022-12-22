@@ -70,10 +70,12 @@ With writing some python code, we can see some beautiful informations about our 
 * mean_all_comments : the mean length of all comments
 
 ![graph5](https://user-images.githubusercontent.com/71349228/209236113-17677677-c18c-47fc-928f-619034347bde.png)
+
 **We need a data augmentation action in English/French/Arabic language (+ ~2000 comments for the arabic/ ~3500 comments for english and frensh), and Code-switching class (+ ~2000 comments)**
 
 ## 5. Data augmentation
 ![data_augmentation](https://user-images.githubusercontent.com/71349228/209236234-51c11479-b2f8-4fa7-b0e9-077a8e196b5e.png)
+
 we will operate the data augmentation task.
 
 We are thinking about balancing our data distribution by adding more labled-data in the Code-switching/English/French class
@@ -82,14 +84,19 @@ There is many methods :
 2. Generate text using OpenAi or any others tools
 3. Scrape more data from social media/ blog sites/ journal or magazine
 4. Back translation/ Synonym Replacement/ Random Insertion/ Random Swap / Random Deletion/ Shuffle Sentences Transform using NLPAug Library (https://neptune.ai/blog/data-augmentation-nlp)
+
 * Our French/English data does not contain the suffisant amount of text to apply the 4th technique
 * Scraping text need more time for annotate data and check it
+
 **The best solution is to use public data set for English/French/arabic text and using text generation for Code-switching text**
+
 *English/French/Arabic language (+ ~2000 comments for the arabic/ ~3500 comments for english and frensh), and Code-switching class (+ ~2000 comments)
+
 ### a. Collecting public Dataset : from Huggingface 🙂
 link : https://huggingface.co/datasets/papluca/language-identification/blob/main/train.csv
 * The data distribution
 ![image](https://user-images.githubusercontent.com/71349228/209236484-3257ba45-ff81-4061-96f1-4b2607cda7ae.png)
+
 ### b. Generating data : Code-switching text: We will discuss many tools ⚡
 1. OpenAi (https://openai.com/api/)
 2. Using a custom LSTM model to generate text : the training data will be our data from Arabic/French/English text (https://www.analyticsvidhya.com/blog/2018/03/text-generation-using-python-nlp/)
