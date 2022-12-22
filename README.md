@@ -175,43 +175,33 @@ let's see the others combination**
 ![image](https://user-images.githubusercontent.com/71349228/209238566-937dfd52-8189-44a5-9b40-76e9b4a7775d.png)
 
 #### Interpretation : 
-The first method  : Bag of words give us a macro averaged F-score equal ``0.89``, but a bad results in the 4th label (recall  = 0.59 for this class)
+Bag of words give us a macro averaged F-score equal ``0.89``, but a bad results in the 4th label (recall  = 0.77 for this class)
 * Best combination  : **tf-idf + Stochastic Gradient Descent**
 
-We will start by **preparing and cleaning** each dataset than merge them together. 
-
-Then we will encode the resulting dataset.
-
-Finnaly, we will **analyze** the weights of the features in the dataset through a HeatMap in order to select the features we will be using in our first Model.
-
-We will thus obtain two files : ``data_for_model1.csv`` and ``data_for_model2.csv``
-
-## 2. Build, run and evaluate the first Model
-
-After importing the file created previously, we will **scale and split** our dataset into train and test data with 80/20.
-
-Then, we will build 6 different supervised ML models (Logistic Regression, Support Vector Machines, Decision Trees, Random Forest, Naive Bayes and K-Nearest Neighbors).
-
-We will evaluate them by their **recall** because we want to correctly classify if a user may have a mental health issue.
-
-We ended up choosing Naive Bayes Model with ``0.923`` recall.
-
-We will also build a DL model with 3 hidden layers. The model has ``0.92`` f1-score.
-
-We decided to go with the Naive Bayes because we discovered that the DL Model is overfitting.
 
 
-## 3. Build, run and evaluate the second Model
+### B. Using the cutting edge Language models (with BERT) 🙂
+* In order to complete a text classification task, you can use BERT in 3 different ways:
 
-We will do the same steps as for the first model.
+1. train it all from scratches and use it as classifier.
+2. Extract the word embeddings and use them in an embedding layer (like I did with Word2Vec).
+3. Fine-tuning the pre-trained model (transfer learning).
 
-Here we decided to use the Random Forest Model with  ``0.928`` recall.
+**We are going with the latter and do transfer learning from a pre-trained lighter version of BERT, called Distil-BERT (66 million of parameters instead of 110 million!).**
 
-We will also build a DL model with 3 hidden layers. The model has ``0.9289`` f1-score.
+* Then! we will going to build the deep learning model with transfer learning from the pre-trained BERT. Basically, we will going to summarize the output of BERT into one vector with Average Pooling and then add two final Dense layers to predict the probability of each langages.
+![image](https://user-images.githubusercontent.com/71349228/209239162-03ffa107-bed7-4ae5-b6a4-06e05d329a6d.png)
+![image](https://user-images.githubusercontent.com/71349228/209239161-04763056-45cd-40ec-9913-c66ef9094f06.png)
+![image](https://user-images.githubusercontent.com/71349228/209239160-a228f0b9-9619-4ad9-bb90-66911b80db0a.png)
 
-## 4. Conclusion
 
-We will be using the Naive Bayes Model as the first Model then we will be using the Random Forest Model as our second model.
+#### Interpretation : 
+Bert give us a macro averaged F-score equal ``0.91``, also a better result in the 4th class classification (recall  = 0.86 for this class)
 
-![results](https://raw.githubusercontent.com/ShathaCodes/tuni-hack/main/results.png)
+
+
+## 8. Conclusion
+Bert reached an accuracy of 93% and macro averaged F-score equal 0.91
+We can do more fixing task like using the TunBert (a model pre-trained by Tunizi langage) to get more accurate results espacily between the CS and the Tunizi langage.
+
 
