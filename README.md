@@ -110,11 +110,11 @@ we will validate our dataset before modeling.
 1. Deep data cleaning :
 
 a.   Clean text : URL, emojis, punctuation (?,:!..) , symbols, newlines and Tabs ... ✊
-b.   Clean langages : validate language letters and convert numeric patterns to letters 🛑
-french langage : Ã© = é, Ã§ = ç, Ã = à, Å“ = oe, Ãª = Ã¨ = è, others = e
 
-Tunizi/Code-switching :
-https://github.com/faressoltani55/TunisianDialectSentimentAnalysis/blob/main/Tunisian_Dialect_Sentiment_Analysis_Model.ipynb
+b.   Clean langages : validate language letters and convert numeric patterns to letters 🛑
+
+* french langage : Ã© = é, Ã§ = ç, Ã = à, Å“ = oe, Ãª = Ã¨ = è, others = e
+* Tunizi/Code-switching : https://github.com/faressoltani55/TunisianDialectSentimentAnalysis/blob/main/Tunisian_Dialect_Sentiment_Analysis_Model.ipynb
 
 c.   Stop words : removing or keeping ❎
 
@@ -127,6 +127,8 @@ text  = "Hamza is a clever person, mais he is stupid!"
 * this text is a C-S text : english and french, if we remove the stopwords ( 'mais' is a french stopword) the text will be english langage! 
 
 2. Data visualisation 🎨
+*distribution : 
+
 ![image](https://user-images.githubusercontent.com/71349228/209237175-9db17c35-670c-473e-a5bc-3961507fcafb.png)
 
 
