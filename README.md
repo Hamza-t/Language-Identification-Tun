@@ -27,11 +27,41 @@ We have 2 different datasets :
 ### c. Annotation
 this task have completed in the class
 
+Attribute to each sentence, a label, from these 5 classes:
+
+* Arabic: all the letters/words are in Arabic
+* French: all the letters/words are in French
+* English: all the letters/words are in English
+* Tunizi: words are written in the Tunisian Arabizi (Latin chars with numerics)
+* Code-switching: the sentence is a mix between more than 2 languages.
+
+
 ## 2. Data preparation
 ![data_preparation](https://user-images.githubusercontent.com/71349228/209235029-0e68eea7-e2f6-4827-a366-cbf49e8afb60.png)
 * we will merge all data file in one data frame and insure the type of each column
 * The final data will contain just 2 columns : "text" and "label"
 * The "text" column shoold be string, the "label" column shoold be integer
+
+## 3. Data cleaning
+![data_cleaning](https://user-images.githubusercontent.com/71349228/209235388-e5ff0c91-d0bb-4a9d-9f66-fc0d96d7e85f.png)
+
+In this step, we will clean text in our data file
+
+1. Delete duplicate rows and Nan values in labels column.
+2. Change the type of data (text column must be string and label colmn must be integer
+3. Clean text data from : URL, emojis, punctuation (?,:!..) , symbols, newlines and Tabs. : Example : To know more about this website: https://Hamza.example.com
+4. Remove Accented Characters. : é, à, ...
+5. Reduce repeated characters. : eyyyyyy (mean "yes") ==> ey
+6. Remove Whitespaces : "How are you doing ?" Case Conversion : str.lower()
+
+## 4. Data visualization
+With writing some python code, we can see some beautiful informations about our data
+![graph1](https://user-images.githubusercontent.com/71349228/209235769-28c68729-b38f-46eb-9bcc-196c09402fbb.png)
+![graph2](https://user-images.githubusercontent.com/71349228/209235835-a6796808-5274-4b38-b99b-c95691ad87b8.png)
+![graph3](https://user-images.githubusercontent.com/71349228/209235875-e9094b33-0249-4d45-9e5d-191fb4358a95.png)
+![graph4](https://user-images.githubusercontent.com/71349228/209235885-978f9cc1-91fc-4317-a5bd-f8a8bf7b04d1.png)
+
+
 
 We will start by **preparing and cleaning** each dataset than merge them together. 
 
