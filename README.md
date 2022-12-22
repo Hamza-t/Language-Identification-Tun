@@ -133,6 +133,19 @@ text  = "Hamza is a clever person, mais he is stupid!"
 
 
 
+## 7. Data modeling : Built the classifier
+
+![image](https://user-images.githubusercontent.com/71349228/209237540-48caad12-5dc8-42db-b40c-034f22c846d8.png)
+
+we will apply the AI stuff to our data to predict the langage of the text.
+
+Our task is a text multilabel classification, there is many methods :
+* the old-fashioned Bag-of-Words (with Tf-Idf or countvector)
+* the cutting edge Language models (with BERT).
+
+![image](https://user-images.githubusercontent.com/71349228/209237621-08da2010-4263-4b50-8bcd-8835f3c641df.png)
+
+
 
 We will start by **preparing and cleaning** each dataset than merge them together. 
 
