@@ -76,7 +76,6 @@ With writing some python code, we can see some beautiful informations about our 
 ## 5. Data augmentation
 ![data_augmentation](https://user-images.githubusercontent.com/71349228/209236234-51c11479-b2f8-4fa7-b0e9-077a8e196b5e.png)
 
-we will operate the data augmentation task.
 
 We are thinking about balancing our data distribution by adding more labled-data in the Code-switching/English/French class
 There is many methods :
@@ -100,7 +99,37 @@ link : https://huggingface.co/datasets/papluca/language-identification/blob/main
 ### b. Generating data : Code-switching text: We will discuss many tools ⚡
 1. OpenAi (https://openai.com/api/)
 2. Using a custom LSTM model to generate text : the training data will be our data from Arabic/French/English text (https://www.analyticsvidhya.com/blog/2018/03/text-generation-using-python-nlp/)
+
 **We will try openai api**
+
+## 6. Data validation
+![image](https://user-images.githubusercontent.com/71349228/209236866-537ba368-2687-4a67-a6c4-98a9b524ce71.png)
+
+we will validate our dataset before modeling.
+ 
+1. Deep data cleaning :
+
+a.   Clean text : URL, emojis, punctuation (?,:!..) , symbols, newlines and Tabs ... ✊
+b.   Clean langages : validate language letters and convert numeric patterns to letters 🛑
+french langage : Ã© = é, Ã§ = ç, Ã = à, Å“ = oe, Ãª = Ã¨ = è, others = e
+
+Tunizi/Code-switching :
+https://github.com/faressoltani55/TunisianDialectSentimentAnalysis/blob/main/Tunisian_Dialect_Sentiment_Analysis_Model.ipynb
+
+c.   Stop words : removing or keeping ❎
+
+* What are stop words? 🤔 The words which are generally filtered out before processing a natural language are called stop words. These are actually the most common words in any language (like articles, prepositions, pronouns, conjunctions, etc) and does not add much information to the text
+
+* As we mentioned, the stopwords are a bags of words in a language, an intersted bag of words!
+* So we can't remove them if we will predict the langage of text 
+* let's take an example:
+text  = "Hamza is a clever person, mais he is stupid!"
+* this text is a C-S text : english and french, if we remove the stopwords ( 'mais' is a french stopword) the text will be english langage! 
+
+2. Data visualisation 🎨
+![image](https://user-images.githubusercontent.com/71349228/209237175-9db17c35-670c-473e-a5bc-3961507fcafb.png)
+
+
 
 
 We will start by **preparing and cleaning** each dataset than merge them together. 
