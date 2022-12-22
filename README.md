@@ -201,7 +201,8 @@ Bert give us a macro averaged F-score equal ``0.91``, also a better result in th
 
 
 ## 8. Conclusion
-Bert reached an accuracy of 93% and macro averaged F-score equal 0.91
+Bert reached an accuracy of 0.93 and macro averaged F-score equal to 0.91.
+
 We can do more fixing task like using the TunBert (a model pre-trained by Tunizi langage) to get more accurate results espacily between the CS and the Tunizi langage.
 
 
