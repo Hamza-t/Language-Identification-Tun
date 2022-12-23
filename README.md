@@ -190,6 +190,7 @@ Bag of words give us a macro averaged F-score equal ``0.89``, but a bad results 
 **We are going with the latter and do transfer learning from a pre-trained lighter version of BERT, called Distil-BERT (66 million of parameters instead of 110 million!).**
 
 * Then! we will going to build the deep learning model with transfer learning from the pre-trained BERT. Basically, we will going to summarize the output of BERT into one vector with Average Pooling and then add two final Dense layers to predict the probability of each langages.
+
 ![image](https://user-images.githubusercontent.com/71349228/209239162-03ffa107-bed7-4ae5-b6a4-06e05d329a6d.png)
 ![image](https://user-images.githubusercontent.com/71349228/209239161-04763056-45cd-40ec-9913-c66ef9094f06.png)
 ![image](https://user-images.githubusercontent.com/71349228/209239160-a228f0b9-9619-4ad9-bb90-66911b80db0a.png)
@@ -203,6 +204,6 @@ Bert give us a macro averaged F-score equal ``0.91``, also a better result in th
 ## 8. Conclusion
 Bert reached an accuracy of 0.93 and macro averaged F-score equal to 0.91.
 
-We can do more fixing task like using the TunBert (a model pre-trained by Tunizi langage) to get more accurate results espacily between the CS and the Tunizi langage.
+We can do more fixing tasks like using the TunBert (a pre-trained bert model with Tunizi langage) to get more accurate results espacily between the CS and the Tunizi langages.
 
 
